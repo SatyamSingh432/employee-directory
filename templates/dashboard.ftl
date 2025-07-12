@@ -30,7 +30,7 @@
         <option>100</option>
       </select>
     </div>
-    <button class="add-btn">Add Employee</button>
+    <button id="addEmployeeBtn"  class="add-btn">Add Employee</button>
   </div>
 
   <div class="employee-container">
@@ -51,6 +51,45 @@
   <footer class="footer">
     © 2025 Employee Directory App. All rights reserved.
   </footer>
+
+  
+<div id="addEmployeeModal" class="modal hidden">
+  <div class="modal-content">
+    <h2>Add Employee</h2>
+    <form id="addEmployeeForm">
+      <label>First name</label>
+      <input type="text" name="firstName" required />
+
+      <label>Last name</label>
+      <input type="text" name="lastName" required />
+
+      <label>Email</label>
+      <input type="email" name="email" required />
+
+      <label>Department</label>
+      <select name="department" required>
+        <option value="">Select</option>
+        <option value="HR">HR</option>
+        <option value="IT">IT</option>
+        <option value="Finance">Finance</option>
+      </select>
+
+      <label>Role</label>
+      <select name="role" required>
+        <option value="">Select</option>
+        <option value="Manager">Manager</option>
+        <option value="Developer">Developer</option>
+        <option value="Analyst">Analyst</option>
+      </select>
+
+      <div class="modal-actions">
+        <button type="button" id="cancelBtn">Cancel</button>
+        <button type="submit">Add</button>
+      </div>
+    </form>
+  </div>
+</div>
+
 
   <script src="./static/js/app.js"></script>
 </body>

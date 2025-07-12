@@ -18,3 +18,16 @@ if (searchInput) {
     });
   });
 }
+
+const addBtn = document.getElementById("addEmployeeBtn");
+const modal = document.getElementById("addEmployeeModal");
+const cancelBtn = document.getElementById("cancelBtn");
+if (addBtn && modal && cancelBtn) {
+  addBtn.addEventListener("click", () => {
+    modal.classList.remove("hidden");
+  });
+
+  cancelBtn.addEventListener("click", () => {
+    modal.classList.add("hidden");
+  });
+}

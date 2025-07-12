@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>Employee Directory</title>
-  <link rel="stylesheet" href="static/css/styles.css">
+  <link rel="stylesheet" href="./static/css/style.css">
 </head>
 <body>
   <header class="header">
@@ -52,6 +52,6 @@
     © 2025 Employee Directory App. All rights reserved.
   </footer>
 
-  <script src="static/js/app.js"></script>
+  <script src="./static/js/app.js"></script>
 </body>
 </html>

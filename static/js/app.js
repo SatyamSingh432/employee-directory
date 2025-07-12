@@ -1,3 +1,5 @@
+console.log("JS is loaded");
+
 function editEmployee(id) {
   alert("Edit clicked for ID: " + id);
 }
@@ -31,3 +33,48 @@ if (addBtn && modal && cancelBtn) {
     modal.classList.add("hidden");
   });
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  console.log("JS is loaded");
+
+  const form = document.getElementById("addEmployeeForm");
+  const modal = document.getElementById("addEmployeeModal");
+  const employeeContainer = document.querySelector(".employee-container");
+
+  form?.addEventListener("submit", (e) => {
+    e.preventDefault();
+    console.log("ewe");
+    const data = new FormData(form);
+
+    const firstName = data.get("firstName").trim();
+    const lastName = data.get("lastName").trim();
+    const email = data.get("email").trim();
+    const department = data.get("department");
+    const role = data.get("role");
+
+    if (!firstName || !lastName || !email || !department || !role) {
+      alert("All fields are required.");
+      return;
+    }
+
+    const id = Date.now();
+
+    const card = document.createElement("div");
+    card.className = "employee-card";
+    card.setAttribute("data-id", id);
+    card.innerHTML = `
+      <strong>${firstName} ${lastName}</strong>
+      <p><strong>Email:</strong> ${email}</p>
+      <p><strong>Department:</strong> ${department}</p>
+      <p><strong>Role:</strong> ${role}</p>
+      <div class="card-buttons">
+        <button onclick="editEmployee(${id})">Edit</button>
+        <button onclick="deleteEmployee(${id})">Delete</button>
+      </div>
+    `;
+
+    employeeContainer.appendChild(card);
+    form.reset();
+    modal.classList.add("hidden");
+  });
+});

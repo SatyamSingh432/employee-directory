@@ -90,6 +90,26 @@
   </div>
 </div>
 
+<div id="filterSidebar" class="filter-sidebar hidden">
+  <h3>Filter Employees</h3>
+
+  <label for="filterName">First Name:</label>
+  <input type="text" id="filterName" />
+
+  <label for="filterDept">Department:</label>
+  <input type="text" id="filterDept" />
+
+  <label for="filterRole">Role:</label>
+  <input type="text" id="filterRole" />
+
+  <div class="filter-actions">
+    <button id="applyFilterBtn">Apply</button>
+    <button id="resetFilterBtn">Reset</button>
+    <button id="closeFilterBtn">Close</button>
+  </div>
+</div>
+
+
 
   <script src="./static/js/app.js"></script>
 </body>

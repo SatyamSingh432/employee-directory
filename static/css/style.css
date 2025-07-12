@@ -14,8 +14,6 @@ body {
 
 .search-filter {
   display: flex;
-  /* height: 50%; */
-  /* justify-content: center; */
   align-items: center;
   gap: 200px;
 }
@@ -53,12 +51,15 @@ body {
   flex-wrap: wrap;
   gap: 1rem;
   padding: 2rem;
+  overflow-y: auto;
+  height: 400px;
 }
 
 .employee-card {
   background: white;
   padding: 1rem;
   width: 280px;
+  height: 200px;
   border-radius: 6px;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
 }

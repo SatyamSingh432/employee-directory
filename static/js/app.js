@@ -78,3 +78,47 @@ document.addEventListener("DOMContentLoaded", () => {
     modal.classList.add("hidden");
   });
 });
+
+const filterName = document.getElementById("filterName");
+const filterDept = document.getElementById("filterDept");
+const filterRole = document.getElementById("filterRole");
+const applyBtn = document.getElementById("applyFilterBtn");
+const resetBtn = document.getElementById("resetFilterBtn");
+
+applyBtn.addEventListener("click", () => {
+  const nameVal = filterName.value.toLowerCase();
+  const deptVal = filterDept.value.toLowerCase();
+  const roleVal = filterRole.value.toLowerCase();
+
+  document.querySelectorAll(".employee-card").forEach((card) => {
+    const text = card.innerText.toLowerCase();
+    const match =
+      (!nameVal || text.includes(nameVal)) &&
+      (!deptVal || text.includes(deptVal)) &&
+      (!roleVal || text.includes(roleVal));
+
+    card.style.display = match ? "block" : "none";
+  });
+});
+
+resetBtn.addEventListener("click", () => {
+  filterName.value = "";
+  filterDept.value = "";
+  filterRole.value = "";
+
+  document.querySelectorAll(".employee-card").forEach((card) => {
+    card.style.display = "block";
+  });
+});
+
+const filterSidebar = document.getElementById("filterSidebar");
+const filterBtn = document.getElementById("filterBtn");
+const closeFilterBtn = document.getElementById("closeFilterBtn");
+
+filterBtn?.addEventListener("click", () => {
+  filterSidebar.classList.remove("hidden");
+});
+
+closeFilterBtn?.addEventListener("click", () => {
+  filterSidebar.classList.add("hidden");
+});

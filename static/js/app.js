@@ -1,5 +1,3 @@
-console.log("JS is loaded");
-
 function editEmployee(id) {
   alert("Edit clicked for ID: " + id);
 }
@@ -35,8 +33,6 @@ if (addBtn && modal && cancelBtn) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("JS is loaded");
-
   const form = document.getElementById("addEmployeeForm");
   const modal = document.getElementById("addEmployeeModal");
   const employeeContainer = document.querySelector(".employee-container");

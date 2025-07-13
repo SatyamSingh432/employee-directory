@@ -62,11 +62,15 @@ java -cp ".:freemarker-2.3.31.jar" Main
 
 4. View in Browser
    After running the program, an index.html file will be generated.
-   Open index.html in any browser to see the Employee Directory dashboar
+   Open index.html in any browser to see the Employee Directory dashboard
 
 ---
 
 Screenshot
+<img width="1437" height="688" alt="Screenshot 2025-07-13 at 10 17 34 PM" src="https://github.com/user-attachments/assets/36d13ec4-f7ca-4797-8498-47adf1ffa7a5" />
+<img width="1423" height="636" alt="Screenshot 2025-07-13 at 10 18 17 PM" src="https://github.com/user-attachments/assets/6d7c1a3a-37cb-42ea-be10-9a02757e1408" />
+<img width="1440" height="686" alt="Screenshot 2025-07-13 at 10 18 46 PM" src="https://github.com/user-attachments/assets/e846cce9-96b2-4355-886d-916da85c8bf9" />
+
 
 ---
 

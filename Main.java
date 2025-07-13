@@ -18,10 +18,10 @@ public class Main {
         Map<String, Object> dataModel = new HashMap<>();
         dataModel.put("employees", employees);
 
-        Writer out = new FileWriter("output.html");
+        Writer out = new FileWriter("index.html");
         template.process(dataModel, out);
         out.close();
 
-        System.out.println("✅ output.html generated!");
+        System.out.println("✅ index.html generated!");
     }
 }

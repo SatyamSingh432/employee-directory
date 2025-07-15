@@ -17,7 +17,7 @@ body {
 .search-filter {
   display: flex;
   align-items: center;
-  gap: 200px;
+  gap: 250px;
 }
 
 .search-filter button {
